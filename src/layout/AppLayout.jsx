@@ -14,9 +14,9 @@ const AppLayout = () => {
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='me-auto'>
+              <Nav.Link href='/diary'>diary</Nav.Link>
               <Nav.Link href='/hospital'>hospital</Nav.Link>
               <Nav.Link href='/medicine'>medicine</Nav.Link>
-              <Nav.Link href='/diary'>diary</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
