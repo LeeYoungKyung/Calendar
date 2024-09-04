@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Map, MapMarker, CustomOverlayMap } from 'react-kakao-maps-sdk';
-import Skeleton from 'react-loading-skeleton';
-const { kakao } = window; // Ensure kakao maps is loaded
+import MapSkeleton from './MapSkeleton';
+const { kakao } = window;
 
 const Hospital = () => {
   const [center, setCenter] = useState(null);
@@ -72,11 +72,7 @@ const Hospital = () => {
   if (!center) {
     return (
       <div>
-        <Skeleton height={400} />
-        <div style={{ marginTop: '10px' }}>
-          <Skeleton width={200} height={30} />
-          <Skeleton width={100} height={20} />
-        </div>
+        <MapSkeleton></MapSkeleton>
       </div>
     );
   }
