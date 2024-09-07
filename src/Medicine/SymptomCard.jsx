@@ -106,3 +106,4 @@ const SymptomCard = ({ onSelectSymptoms }) => {
 };
 
 export default SymptomCard;
+//npx json-server --watch db.json --port 4000

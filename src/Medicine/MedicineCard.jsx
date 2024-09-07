@@ -13,7 +13,7 @@ const MedicineCard = ({ item }) => {
       <div className='text-lg font-bold mb-2'>{item?.title}</div>
       <div className='text-sm text-gray-600 mb-4'>{item?.company}</div>
 
-      <div className='flex flex-wrap gap-2 '>
+      <div className='flex flex-wrap gap-2'>
         {item?.add?.map((element, index) => (
           <span
             key={index}
