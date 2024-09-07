@@ -1,9 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const MedicineCard = ({ item }) => {
+  const navigate = useNavigate();
+
+  const handleAddClick = (id) => {
+    navigate(`/medicine/${id}`);
+  };
+
   return (
     <div className='p-4 border rounded-lg max-w-xs m-2'>
-      <div className='flex items-center justify-center w-48 h-48 mb-4 rounded-lg overflow-hidden'>
+      <div
+        className='flex items-center justify-center w-48 h-48 mb-4 rounded-lg overflow-hidden'
+        onClick={() => handleAddClick(item.id)}
+      >
         <img
           src={item?.img}
           alt={item?.title}
@@ -17,7 +27,7 @@ const MedicineCard = ({ item }) => {
         {item?.add?.map((element, index) => (
           <span
             key={index}
-            className='inline-block bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full'
+            className='inline-block bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full cursor-pointer'
           >
             {element}
           </span>
