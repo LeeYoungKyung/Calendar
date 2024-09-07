@@ -9,7 +9,7 @@ const AppLayout = () => {
   return (
     <div>
       <Navbar expand='lg' className='bg-body-tertiary'>
-        <Container>
+        <Container className='w-[80%]'>
           <Navbar.Brand href='/'>로고</Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
