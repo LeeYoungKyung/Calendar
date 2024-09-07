@@ -5,112 +5,160 @@
       "title": "타이레놀정160밀리그람(아세트아미노펜)",
       "company": "(주)한국얀센",
       "add": ["신경통", "두통", "치통", "생리통", "관절통"],
-      "img": "https://www.tylenol.co.kr/sites/tylenol_kr/files/styles/product_image/public/tairenol_500mg_yaggugyong_ceugmyeontylenol_500mg.jpg"
+      "img": "https://www.tylenol.co.kr/sites/tylenol_kr/files/styles/product_image/public/tairenol_500mg_yaggugyong_ceugmyeontylenol_500mg.jpg",
+      "dosage": "1정, 4~6시간 간격으로 복용, 하루 최대 6정까지",
+      "cautions": "간 기능이 저하된 경우, 알코올과 함께 복용 시 주의. 장기 복용 시 간 손상 우려.",
+      "kid": false
     },
     {
       "id": "2",
       "title": "경남 나프록센",
       "company": "(주)경남제약",
       "add": ["관절통", "근육통", "생리통", "두통", "치통"],
-      "img": "https://www.kyungnampharm.com:6519/upload/goods/210701_Lemona215632.png"
+      "img": "https://www.kyungnampharm.com:6519/upload/goods/210701_Lemona215632.png",
+      "dosage": "1정, 식사 후 복용, 하루 2~3회 복용",
+      "cautions": "위장 장애가 있을 수 있으므로 공복에는 복용하지 말 것. 신장 질환이 있는 경우 주의.",
+      "kid": false
     },
     {
       "id": "3",
       "title": "게보린정",
       "company": "삼진제약",
       "add": ["두통", "치통", "생리통"],
-      "img": "https://www.samjinpharm.co.kr/upload/20230810/202308101310000_%EA%B2%8C%EB%B3%B4%EB%A6%B0%EC%A0%95_%EB%8B%A8%EC%B2%B4%EC%BB%B7(%EC%83%81%EC%84%B8%EC%BB%B7)_%EC%9B%B9%EC%9A%A9_230807.jpg"
+      "img": "https://www.samjinpharm.co.kr/upload/20230810/202308101310000_%EA%B2%8C%EB%B3%B4%EB%A6%B0%EC%A0%95_%EB%8B%A8%EC%B2%B4%EC%BB%B7(%EC%83%81%EC%84%B8%EC%BB%B7)_%EC%9B%B9%EC%9A%A9_230807.jpg",
+      "dosage": "1정, 4~6시간 간격으로 복용, 하루 최대 6정까지",
+      "cautions": "간 기능이 저하된 경우, 장기 복용 시 간 손상 우려. 위염이 있는 경우 주의.",
+      "kid": false
     },
     {
       "id": "4",
       "title": "펜잘큐정",
       "company": "종근당",
       "add": ["생리통", "두통", "치통"],
-      "img": "https://www.ckdpharm.com/upload/images/2019/08/28/151572306690045505.jpg"
+      "img": "https://www.ckdpharm.com/upload/images/2019/08/28/151572306690045505.jpg",
+      "dosage": "1정, 식사 후 복용, 하루 최대 3회 복용",
+      "cautions": "위장 장애가 있을 수 있으므로 공복에는 복용하지 말 것. 간장 질환이 있는 경우 주의.",
+      "kid": false
     },
     {
       "id": "5",
       "title": "그날엔정",
       "company": "경동제약",
       "add": ["신경통", "두통", "치통", "생리통", "요통", "염좌통"],
-      "img": "https://kdpharma.co.kr/uploaded/shop_good/689/e92063d7bc4a919923e02b76d33c2bda0.png"
+      "img": "https://kdpharma.co.kr/uploaded/shop_good/689/e92063d7bc4a919923e02b76d33c2bda0.png",
+      "dosage": "1~2정, 4~6시간 간격으로 복용, 하루 최대 6정까지",
+      "cautions": "위장 장애, 간 기능 저하 시 주의. 알코올과 함께 복용하지 말 것.",
+      "kid": false
     },
     {
       "id": "6",
       "title": "베아제",
       "company": "대웅제약",
       "add": ["소화불량", "과식", "식체"],
-      "img": "https://www.daewoong.co.kr/attach/202004/08611963a680448a8a38b8d5237af4a5.jpg"
+      "img": "https://www.daewoong.co.kr/attach/202004/08611963a680448a8a38b8d5237af4a5.jpg",
+      "dosage": "1~2정, 식사 중 또는 직후 복용",
+      "cautions": "약간의 위장 장애가 있을 수 있음. 장기 복용 시 위장 질환 우려.",
+      "kid": false
     },
     {
       "id": "7",
       "title": "훼스탈 골드",
       "company": "한독",
       "add": ["소화불량", "과식", "식체"],
-      "img": "https://www.handok.co.kr/uploads/product/20240321/thumb/thumb2_fdfc8ff0-0e9b-47bb-8b44-8ec3480d7305.jpg"
+      "img": "https://www.handok.co.kr/uploads/product/20240321/thumb/thumb2_fdfc8ff0-0e9b-47bb-8b44-8ec3480d7305.jpg",
+      "dosage": "1~2정, 식사 중 또는 직후 복용",
+      "cautions": "소화 장애가 있을 수 있으므로 장기 복용 주의. 위염이 있는 경우 사용 자제.",
+      "kid": false
     },
     {
       "id": "8",
       "title": "스타빅",
       "company": "대웅바이오",
       "add": ["설사"],
-      "img": "https://www.daewoong.co.kr/attach/202104/778d2ffa7b854e628b2e599358af82d4.jpg"
+      "img": "https://www.daewoong.co.kr/attach/202104/778d2ffa7b854e628b2e599358af82d4.jpg",
+      "dosage": "1정, 필요시 복용, 하루 최대 4정까지",
+      "cautions": "지속적인 설사나 탈수 증상 시 사용 중지. 장기 복용 시 주의.",
+      "kid": false
     },
     {
       "id": "9",
       "title": "모드콜 시럽",
       "company": "종근당",
       "add": ["종합감기"],
-      "img": "https://www.ckdpharm.com/upload/images/2019/08/28/2010081617043346091043032677.JPG"
+      "img": "https://www.ckdpharm.com/upload/images/2019/08/28/2010081617043346091043032677.JPG",
+      "dosage": "1~2스푼, 6시간 간격으로 복용, 하루 최대 4회 복용",
+      "cautions": "지속적인 증상 시 의사와 상담. 당뇨병 환자는 복용 시 주의.",
+      "kid": true
     },
     {
       "id": "10",
       "title": "코애드에프정",
       "company": "(주)태극제약",
       "add": ["콧물", "재채기", "코막힘"],
-      "img": "https://www.careshop.co.kr/eimages/display/AHG72418_A23_l.jpg"
+      "img": "https://www.careshop.co.kr/eimages/display/AHG72418_A23_l.jpg",
+      "dosage": "1정, 필요시 복용, 하루 최대 3회",
+      "cautions": "드물게 졸음 증상이 있을 수 있으므로 운전 주의. 고혈압 환자는 사용 자제.",
+      "kid": false
     },
     {
       "id": "11",
       "title": "이지엔6",
       "company": "대웅제약",
       "add": ["진통", "해열", "소염"],
-      "img": "https://www.daewoong.co.kr/attach/202107/b9f7ab7de2ca458498d8a25300b229ca.jpg"
+      "img": "https://www.daewoong.co.kr/attach/202107/b9f7ab7de2ca458498d8a25300b229ca.jpg",
+      "dosage": "1정, 4~6시간 간격으로 복용, 하루 최대 6정까지",
+      "cautions": "위장 장애와 간 기능 저하 시 주의. 장기 복용 시 간 손상 우려.",
+      "kid": false
     },
     {
       "id": "12",
       "title": "노바손",
       "company": "GC녹십자",
       "add": ["습진", "아토피", "알레르기성", "피부질환"],
-      "img": "http://www.gcbiopharma.com/kor/upload/PRO/202110/663ea8ce-0249-42fb-b7f9-56695c664110.png"
+      "img": "http://www.gcbiopharma.com/kor/upload/PRO/202110/663ea8ce-0249-42fb-b7f9-56695c664110.png",
+      "dosage": "적당량, 2~3회 도포",
+      "cautions": "눈에 들어가지 않도록 주의. 피부에 자극이 있을 경우 사용 중지.",
+      "kid": false
     },
     {
       "id": "13",
       "title": "조아덱스판크림",
       "company": "조야제약",
       "add": ["피부질환", "아토피", "귀저기"],
-      "img": "https://www.choa.co.kr/userFiles/product/filename20230807_135219_0150737.jpg?cmd=thumb&width=308"
+      "img": "https://www.choa.co.kr/userFiles/product/filename20230807_135219_0150737.jpg?cmd=thumb&width=308",
+      "dosage": "적당량, 2~3회 도포",
+      "cautions": "눈, 입에 들어가지 않도록 주의. 발진 발생 시 사용 중지.",
+      "kid": true
     },
     {
       "id": "14",
       "title": "안티스토",
       "company": "제일에스사이언스",
       "add": ["습진", "피부질환", "구내염", "설염"],
-      "img": "https://www.jeilpharm.co.kr/data/product/product_img/412_160101.jpg"
+      "img": "https://www.jeilpharm.co.kr/data/product/product_img/412_160101.jpg",
+      "dosage": "적당량, 2~3회 도포",
+      "cautions": "긴 시간 사용 시 피부 자극 가능성. 눈에 닿지 않도록 주의.",
+      "kid": false
     },
     {
       "id": "15",
       "title": "탁센",
       "company": "GC녹십자",
       "add": ["두통", "근육통", "치통", "염좌통", "생리통"],
-      "img": "http://www.gcbiopharma.com/kor/upload/PRO/202408/f5b38e26-8665-4662-ba16-5159682c2bf3.png"
+      "img": "http://www.gcbiopharma.com/kor/upload/PRO/202408/f5b38e26-8665-4662-ba16-5159682c2bf3.png",
+      "dosage": "1정, 4~6시간 간격으로 복용, 하루 최대 6정까지",
+      "cautions": "장기 복용 시 간 기능 저하 우려. 위장 장애 발생 시 사용 중지.",
+      "kid": false
     },
     {
       "id": "16",
       "title": "RU-21",
       "company": "건강기능식품",
       "add": ["숙취"],
-      "img": "https://www.papearl.com:10454/upload/goods/139645/139645_0_500.jpg"
+      "img": "https://www.papearl.com:10454/upload/goods/139645/139645_0_500.jpg",
+      "dosage": "1~2정, 음주 후 복용",
+      "cautions": "알코올과 함께 복용할 경우 효과가 감소할 수 있음. 장기 복용 자제.",
+      "kid": false
     }
   ]
 }
