@@ -1,5 +1,7 @@
+// Hospital.js
 import React, { useEffect, useState } from 'react';
-import { Map, MapMarker, CustomOverlayMap } from 'react-kakao-maps-sdk';
+import MapComponent from './MapComponent';
+import HospitalList from './HospitalList';
 import MapSkeleton from './MapSkeleton';
 const { kakao } = window;
 
@@ -23,12 +25,12 @@ const Hospital = () => {
           });
         },
         (error) => {
-          console.error('Error getting location', error);
-          // Handle error or fallback
+          console.error('위치 정보를 가져오는 데 실패했습니다.', error);
+          // 오류 처리 또는 대체 방법
         }
       );
     } else {
-      console.error('Geolocation is not supported by this browser.');
+      console.error('이 브라우저는 지리 위치 서비스를 지원하지 않습니다.');
     }
   }, []);
 
@@ -96,123 +98,17 @@ const Hospital = () => {
           margin: '0 auto',
         }}
       >
-        <Map
-          id='map'
+        <MapComponent
           center={center}
-          style={{ width: '100%', height: '100%' }}
-          level={3}
-        >
-          <MapMarker position={center} title='You are here' />
-          {markers.map((marker) => (
-            <React.Fragment key={marker.id}>
-              <MapMarker
-                position={{ lat: marker.y, lng: marker.x }}
-                image={{
-                  src: 'https://cdn-icons-png.flaticon.com/128/2098/2098567.png',
-                  size: { width: 35, height: 35 },
-                }}
-                title={`Marker ${marker.index + 1}`}
-                onClick={() => handleMarkerClick(marker)} // 클릭 시 병원 정보 저장
-              />
-              <CustomOverlayMap
-                position={{ lat: marker.y, lng: marker.x }}
-                xAnchor={0.5}
-                yAnchor={0.5}
-                zIndex={1}
-              >
-                <div
-                  style={{
-                    padding: '2px',
-                    backgroundColor: 'white',
-                    border: '1px solid #ddd',
-                    borderRadius: '5px',
-                    boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
-                    textAlign: 'center',
-                    fontSize: '10px',
-                  }}
-                >
-                  <span>{marker.place_name}</span>
-                </div>
-              </CustomOverlayMap>
-            </React.Fragment>
-          ))}
-        </Map>
+          markers={markers}
+          onMarkerClick={handleMarkerClick}
+        />
       </div>
-
-      <div
-        style={{
-          height: '300px',
-          overflowY: 'auto',
-          backgroundColor: '#f8f9fa',
-          padding: '20px',
-          borderTop: '1px solid #ddd',
-          width: '100%',
-          maxWidth: '1200px',
-          margin: '0 auto',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
-        <div style={{ marginBottom: '20px' }}>
-          {categories.map((category) => (
-            <button
-              className='bg-slate-400 hover:text-white hover:bg-slate-600 pl-20 pr-20 pb-3 pt-3 opacity-90 m-2 rounded-xl'
-              key={category.id}
-              onClick={() => handleButtonClick(category)}
-              style={{
-                border: 'none',
-                fontSize: '16px',
-                cursor: 'pointer',
-                transition: 'background-color 0.3s',
-              }}
-            >
-              {category.value}
-            </button>
-          ))}
-        </div>
-        <ul
-          className='bg-white shadow-md rounded-md w-full max-w-3xl'
-          style={{ listStyleType: 'none', padding: '0', margin: '0' }}
-        >
-          {hospitalList.map((hospital) => (
-            <li
-              className='p-4'
-              key={hospital.id}
-              style={{
-                marginBottom: '10px',
-                borderBottom: '1px solid #ddd',
-                paddingBottom: '10px',
-                backgroundColor: '#f9f9f9',
-                borderRadius: '8px',
-                transition: 'background-color 0.3s',
-              }}
-            >
-              <a
-                className='text-center'
-                href={hospital.place_url}
-                target='_blank'
-                rel='noopener noreferrer'
-                style={{
-                  textDecoration: 'none',
-                  color: '#333',
-                  fontSize: '16px',
-                  display: 'block',
-                  padding: '10px',
-                }}
-              >
-                <span style={{ fontWeight: 'bold', marginRight: '10px' }}>
-                  {hospital.index + 1}.
-                </span>
-                {hospital.place_name} <br />
-                📍{hospital.address_name}
-                <br />
-                ☎️ {hospital.phone}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <HospitalList
+        categories={categories}
+        hospitalList={hospitalList}
+        onCategoryClick={handleButtonClick}
+      />
     </div>
   );
 };
