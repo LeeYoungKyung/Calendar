@@ -46,7 +46,7 @@ const MedicineDetail = () => {
           <div className='flex flex-wrap gap-2'>
             <div>
               {' '}
-              {product?.kid == true ? <TbMoodKid className='h-10 w-10' /> : ''}
+              {product?.kid === true ? <TbMoodKid className='h-10 w-10' /> : ''}
             </div>
             {product?.add?.map((element, index) => (
               <span

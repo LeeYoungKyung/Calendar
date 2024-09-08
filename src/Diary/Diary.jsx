@@ -34,6 +34,7 @@ const Diary = () => {
     });
     setShowModal(true);
   };
+  console.log(selectedDate);
 
   const handleAddEvent = () => {
     const color =
@@ -86,9 +87,8 @@ const Diary = () => {
   };
 
   const eventStyleGetter = (event) => {
-    const backgroundColor = event.color;
     const style = {
-      backgroundColor,
+      backgroundColor: event.color,
       borderRadius: '5px',
       opacity: 0.8,
       color: 'white',
@@ -99,7 +99,7 @@ const Diary = () => {
   };
 
   const CustomToolbar = (toolbar) => {
-    const { date, view, onNavigate, onView } = toolbar;
+    const { date, onNavigate, onView } = toolbar;
 
     return (
       <div className='rbc-toolbar'>
@@ -196,7 +196,13 @@ const Diary = () => {
         </div>
 
         {/* 날짜추가 모달 */}
-        <Modal show={showModal} onHide={() => setShowModal(false)}>
+        <Modal
+          show={showModal}
+          onHide={() => {
+            setShowModal(false);
+            setNewEvent({ title: '', start: '', end: '', category: '' });
+          }}
+        >
           <Modal.Header closeButton>
             <Modal.Title>일정을 추가해주세요🖊️</Modal.Title>
           </Modal.Header>

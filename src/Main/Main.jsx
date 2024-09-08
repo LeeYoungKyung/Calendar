@@ -137,9 +137,9 @@ const Main = () => {
           </a>
         </div>
         <div>
-          <a className='no-underline text-black opacity-40 flex items-center'>
+          <div className='no-underline text-black opacity-40 flex items-center'>
             <IoMdMail className='mr-2' /> yklee1040@naver.com
-          </a>
+          </div>
         </div>
       </div>
       {/*  */}
