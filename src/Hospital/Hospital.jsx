@@ -1,4 +1,3 @@
-// Hospital.js
 import React, { useEffect, useState } from 'react';
 import MapComponent from './MapComponent';
 import HospitalList from './HospitalList';

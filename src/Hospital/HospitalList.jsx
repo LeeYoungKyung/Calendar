@@ -1,4 +1,3 @@
-// HospitalList.js
 import React from 'react';
 
 const HospitalList = ({ categories, hospitalList, onCategoryClick }) => {

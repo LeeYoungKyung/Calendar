@@ -1,4 +1,3 @@
-// MapComponent.js
 import React from 'react';
 import { Map, MapMarker, CustomOverlayMap } from 'react-kakao-maps-sdk';
 
