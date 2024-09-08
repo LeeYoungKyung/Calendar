@@ -36,7 +36,7 @@ const Hospital = () => {
   const searchPlaces = (category) => {
     if (!center) return;
 
-    const ps = new kakao.maps.services.Places();
+    const ps = new window.kakao.maps.services.Places();
     const options = {
       location: new kakao.maps.LatLng(center.lat, center.lng),
       radius: 5000,
