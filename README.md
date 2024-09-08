@@ -70,7 +70,7 @@ npm start
 
 <img width="80%" src="https://github.com/user-attachments/assets/ce6a81eb-8262-473b-988c-9e2bdef0a5e7" alt="diary2">
 
-<img width="80%" src=https://github.com/user-attachments/assets/6b25c513-d9b0-41e2-a1d3-0b32d03bd2f0" alt="diaryDelete">
+<img width="80%" src="https://github.com/user-attachments/assets/6b25c513-d9b0-41e2-a1d3-0b32d03bd2f0" alt="diaryDelete">
 
 ### ✔️ Hospital/Pharmacy
 
