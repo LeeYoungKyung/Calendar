@@ -57,13 +57,23 @@ npm start
 ## 4. 컴포넌트 소개
 
 ✔️ Main
+<img width="80%" src="https://github.com/user-attachments/assets/60598e09-62a4-4f85-9513-a08680d4e849" alt="image1">
+
+<img width="80%" src="https://github.com/user-attachments/assets/ebee3c29-f0a6-473a-988a-e08d8f7a4cbd" alt="image2">
 
 ✔️ Diary
+
 <img width="80%" src="https://github.com/user-attachments/assets/46788a93-e0ec-4f1f-9940-484fcdfeb07f" alt="diary">
+
 <img width="80%" src="https://github.com/user-attachments/assets/ce6a81eb-8262-473b-988c-9e2bdef0a5e7" alt="diary2">
 
 ✔️ Hospital/Pharmacy
+
+<img width="80%" src="https://github.com/user-attachments/assets/a7648c5c-26cc-415a-90a6-eafb86c34eb2" alt="hospital">
+
 ✔️ Medicine
+
+<img width="80%" src="https://github.com/user-attachments/assets/98db625b-2b38-41c4-94c8-38989934d560" alt="medicine">
 
 ### 커밋 규칙
 
