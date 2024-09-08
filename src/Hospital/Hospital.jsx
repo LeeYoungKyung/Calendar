@@ -2,17 +2,34 @@ import React, { useEffect, useState } from 'react';
 import MapComponent from './MapComponent';
 import HospitalList from './HospitalList';
 import MapSkeleton from './MapSkeleton';
-const { kakao } = window;
 
 const Hospital = () => {
   const [center, setCenter] = useState(null);
   const [markers, setMarkers] = useState([]);
   const [hospitalList, setHospitalList] = useState([]);
+  const [kakaoLoaded, setKakaoLoaded] = useState(false);
 
   const categories = [
     { id: 'HP8', value: '병원' },
     { id: 'PM9', value: '약국' },
   ];
+
+  useEffect(() => {
+    const loadKakaoMapScript = () => {
+      const script = document.createElement('script');
+      script.src =
+        'https://dapi.kakao.com/v2/maps/sdk.js?appkey=REACT_APP_KAKAO_JAVASCRIPT_KEY';
+      script.async = true;
+      script.onload = () => setKakaoLoaded(true);
+      document.head.appendChild(script);
+    };
+
+    if (!window.kakao) {
+      loadKakaoMapScript();
+    } else {
+      setKakaoLoaded(true);
+    }
+  }, []);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -34,19 +51,19 @@ const Hospital = () => {
   }, []);
 
   const searchPlaces = (category) => {
-    if (!center) return;
+    if (!center || !kakaoLoaded) return;
 
     const ps = new window.kakao.maps.services.Places();
     const options = {
-      location: new kakao.maps.LatLng(center.lat, center.lng),
+      location: new window.kakao.maps.LatLng(center.lat, center.lng),
       radius: 5000,
-      sort: kakao.maps.services.SortBy.DISTANCE,
+      sort: window.kakao.maps.services.SortBy.DISTANCE,
     };
 
     ps.categorySearch(
       category.id,
       (data, status, _pagination) => {
-        if (status === kakao.maps.services.Status.OK) {
+        if (status === window.kakao.maps.services.Status.OK) {
           const markersWithIndex = data.map((item, index) => ({
             ...item,
             index,
@@ -73,7 +90,7 @@ const Hospital = () => {
   if (!center) {
     return (
       <div>
-        <MapSkeleton></MapSkeleton>
+        <MapSkeleton />
       </div>
     );
   }
