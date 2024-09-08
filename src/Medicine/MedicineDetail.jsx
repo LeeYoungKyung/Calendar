@@ -2,33 +2,46 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 
-//아이콘
+// 아이콘
 import { TbMoodKid } from 'react-icons/tb';
 
 const MedicineDetail = () => {
   let { id } = useParams();
   const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const getDetail = async () => {
-    let url = `http://localhost:4000/medecine/${id}`;
-    let response = await fetch(url);
-    let data = await response.json();
-    console.log(data);
-    setProduct(data);
+    try {
+      let url = `http://localhost:4000/medecine/${id}`;
+      let response = await fetch(url);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      let data = await response.json();
+      setProduct(data);
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
     getDetail();
-  }, []);
+  }, [id]); // id가 변경될 때마다 호출
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <Container>
       <Row className='items-center h-lvh'>
-        <Col md={6} className='mb-4 md:mb-0 '>
+        <Col md={6} className='mb-4 md:mb-0'>
           <img
             src={product?.img}
             alt={product?.title}
-            className='w-full h-auto rounded-lg orverflow-hidden '
+            className='w-full h-auto rounded-lg overflow-hidden'
           />
         </Col>
         <Col md={6} className='p-4 bg-white shadow-md rounded-lg'>
@@ -44,10 +57,7 @@ const MedicineDetail = () => {
             <strong>주의사항:</strong> {product?.cautions}
           </div>
           <div className='flex flex-wrap gap-2'>
-            <div>
-              {' '}
-              {product?.kid === true ? <TbMoodKid className='h-10 w-10' /> : ''}
-            </div>
+            {product?.kid === true && <TbMoodKid className='h-10 w-10' />}
             {product?.add?.map((element, index) => (
               <span
                 key={index}
@@ -57,9 +67,10 @@ const MedicineDetail = () => {
               </span>
             ))}
           </div>
-        </Col>{' '}
+        </Col>
         <div className='text-center text-lg font-semibold'>
-          💊 폐의약품을 쓰레기통에 버리지 마세요!<br></br>
+          💊 폐의약품을 쓰레기통에 버리지 마세요!
+          <br />
           폐의약품 수거함에 버리셔야 합니다.
         </div>
       </Row>
