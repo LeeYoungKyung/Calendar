@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-
-// 아이콘
 import { TbMoodKid } from 'react-icons/tb';
 
 const MedicineDetail = () => {
@@ -29,7 +27,7 @@ const MedicineDetail = () => {
 
   useEffect(() => {
     getDetail();
-  }, [id]); // id가 변경될 때마다 호출
+  }, [id]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
@@ -49,7 +47,6 @@ const MedicineDetail = () => {
           <p className='text-gray-700 mb-2'>
             <strong>Company:</strong> {product?.company}
           </p>
-
           <div className='mb-2'>
             <strong>복용:</strong> {product?.dosage}
           </div>

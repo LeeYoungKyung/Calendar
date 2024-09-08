@@ -12,8 +12,14 @@ const Medicine = () => {
     let url = `http://localhost:4000/medecine`;
     let response = await fetch(url);
     let data = await response.json();
-    console.log(data);
     setMedicine(data);
+  };
+
+  const filterMedicines = (symptoms) => {
+    const filtered = medicine.filter((med) =>
+      symptoms.every((symptom) => med.add.includes(symptom))
+    );
+    setFilteredMedicine(filtered);
   };
 
   useEffect(() => {
@@ -24,13 +30,6 @@ const Medicine = () => {
     filterMedicines(selectedSymptoms);
   }, [selectedSymptoms, medicine]);
 
-  const filterMedicines = (symptoms) => {
-    const filtered = medicine.filter((med) =>
-      symptoms.every((symptom) => med.add.includes(symptom))
-    );
-    setFilteredMedicine(filtered);
-  };
-
   const handleSymptomSelection = (symptoms) => {
     setSelectedSymptoms(symptoms);
   };
@@ -40,7 +39,6 @@ const Medicine = () => {
       <div className='flex justify-center'>
         <div className='w-[80%]'>
           <SymptomCard onSelectSymptoms={handleSymptomSelection} />
-
           <div className='flex overflow-y-scroll'>
             {filteredMedicine.map((item) => (
               <MedicineCard key={item.id} item={item} />
