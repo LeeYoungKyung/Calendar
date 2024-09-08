@@ -28,6 +28,9 @@
 <div align="center">
 
 </div>
+
+<img src="https://github.com/user-attachments/assets/d70ca6be-653c-474d-87ae-e8299f771926" alt="logo">
+
 <b>
 바쁜 일상 속에서 건강 관리를 보다 효율적으로 할 수 있도록 돕기 위해서입니다. 사용자들이 다이어리 기능을 통해 약 복용 시간, 운동 일정, 병원 예약 등을 체계적으로 관리할 수 있으며, 특정 증상에 맞는 약을 추천받아 빠르게 대처할 수 있습니다. 또한, 근처 병원과 약국을 지도에서 쉽게 찾아볼 수 있는 기능을 제공함으로써, 건강과 관련된 여러 활동을 한 곳에서 편리하게 관리할 수 있도록 돕고자 했습니다.
 <br /><br />
@@ -66,6 +69,8 @@ npm start
 <img width="80%" src="https://github.com/user-attachments/assets/46788a93-e0ec-4f1f-9940-484fcdfeb07f" alt="diary">
 
 <img width="80%" src="https://github.com/user-attachments/assets/ce6a81eb-8262-473b-988c-9e2bdef0a5e7" alt="diary2">
+
+<img width="80%" src=https://github.com/user-attachments/assets/6b25c513-d9b0-41e2-a1d3-0b32d03bd2f0" alt="diaryDelete">
 
 ### ✔️ Hospital/Pharmacy
 
