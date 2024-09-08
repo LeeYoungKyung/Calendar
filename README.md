@@ -59,9 +59,9 @@ npm start
 ✔️ Main
 
 ✔️ Diary
-<img width="80%" src="![diary](https://github.com/user-attachments/assets/46788a93-e0ec-4f1f-9940-484fcdfeb07f)">
-<img width="80%" src="![diary2](https://github.com/user-attachments/assets/ce6a81eb-8262-473b-988c-9e2bdef0a5e7)
-">
+<img width="80%" src="https://github.com/user-attachments/assets/46788a93-e0ec-4f1f-9940-484fcdfeb07f" alt="diary">
+<img width="80%" src="https://github.com/user-attachments/assets/ce6a81eb-8262-473b-988c-9e2bdef0a5e7" alt="diary2">
+
 ✔️ Hospital/Pharmacy
 ✔️ Medicine
 
