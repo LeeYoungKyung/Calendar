@@ -42,14 +42,19 @@ npm install
 ## 3. 실행 방법
 
 ### JSON-server
+
 ```
 npx json-server --watch db.json --port 4000
 ```
+
 ### Client
+
 ```
 npm install
 npm start
 ```
+
+
 ## 4. 컴포넌트 소개
 
  ✔️ Main
