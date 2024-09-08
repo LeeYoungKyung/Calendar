@@ -7,7 +7,10 @@ import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop';
 import { Modal, Button, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-moment.locale('ko'); // moment의 로케일을 한국어로 설정
+// 아이콘
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+
+moment.locale('ko');
 const localizer = momentLocalizer(moment);
 const DragAndDropCalendar = withDragAndDrop(Calendar);
 
@@ -95,6 +98,37 @@ const Diary = () => {
     return { style };
   };
 
+  const CustomToolbar = (toolbar) => {
+    const { date, view, onNavigate, onView } = toolbar;
+
+    return (
+      <div className='rbc-toolbar'>
+        <span className='rbc-btn-group'>
+          <Button variant='link' onClick={() => onNavigate('PREV')}>
+            <FaChevronLeft />
+          </Button>
+          <Button variant='link' onClick={() => onNavigate('NEXT')}>
+            <FaChevronRight />
+          </Button>
+        </span>
+        <span className='rbc-toolbar-label'>
+          {moment(date).format('YYYY년 MM월')}
+        </span>
+        <span className='rbc-btn-group'>
+          <Button variant='link' onClick={() => onView('month')}>
+            월
+          </Button>
+          <Button variant='link' onClick={() => onView('week')}>
+            주
+          </Button>
+          <Button variant='link' onClick={() => onView('day')}>
+            일
+          </Button>
+        </span>
+      </div>
+    );
+  };
+
   return (
     <>
       <div className='w-[80%] items-center mx-auto'>
@@ -133,9 +167,9 @@ const Diary = () => {
             resizable
             eventPropGetter={eventStyleGetter}
             formats={{
-              weekdayFormat: 'ddd', // 'ddd'는 요일을 3글자로 축약하여 표시
-              dayFormat: 'MM월 DD일', // 일별 형식
-              monthHeaderFormat: 'YYYY년 MM월', // 월별 형식
+              weekdayFormat: 'ddd',
+              dayFormat: 'MM월 DD일',
+              monthHeaderFormat: 'YYYY년 MM월',
             }}
             components={{
               event: ({ event }) => (
@@ -156,6 +190,7 @@ const Diary = () => {
                   </Button>
                 </div>
               ),
+              toolbar: CustomToolbar,
             }}
           />
         </div>
