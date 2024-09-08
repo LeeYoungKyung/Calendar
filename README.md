@@ -1,8 +1,4 @@
-<br />
 
-### <a href='https://calendar-rouge-chi.vercel.app/' target="_blank">🔗 Demo Link</a>
-
-<br />
 
 # 목차
 
