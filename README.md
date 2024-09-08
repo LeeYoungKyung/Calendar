@@ -38,7 +38,7 @@
 # 2. 소스 빌드
 
 ```
-npm install
+npm run build
 ```
 
 ## 3. 실행 방법
