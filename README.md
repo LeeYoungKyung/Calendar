@@ -34,7 +34,7 @@
 
 # 2. 소스 빌드
 
-````
+```
 npm install
 
 ```
@@ -54,21 +54,16 @@ npm install
 npm start
 ```
 
-
 ## 4. 컴포넌트 소개
 
- ✔️ Main
+✔️ Main
 
- ✔️ Diary
- <img width="80%" src="![diary](https://github.com/user-attachments/assets/46788a93-e0ec-4f1f-9940-484fcdfeb07f)">
- <img width="80%" src="![diary2](https://github.com/user-attachments/assets/ce6a81eb-8262-473b-988c-9e2bdef0a5e7)
+✔️ Diary
+<img width="80%" src="![diary](https://github.com/user-attachments/assets/46788a93-e0ec-4f1f-9940-484fcdfeb07f)">
+<img width="80%" src="![diary2](https://github.com/user-attachments/assets/ce6a81eb-8262-473b-988c-9e2bdef0a5e7)
 ">
- ✔️ Hospital/Pharmacy
- ✔️ Medicine
-
-
-
-
+✔️ Hospital/Pharmacy
+✔️ Medicine
 
 ### 커밋 규칙
 
@@ -91,4 +86,7 @@ css등 ui변경 : [design]
 이미지, 파일, 코드 추가 : [add]
 
 설치 : [install]
-````
+
+```
+
+```
