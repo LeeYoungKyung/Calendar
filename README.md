@@ -54,7 +54,7 @@ npx json-server --watch db.json --port 4000
 npm install
 npm start
 ```
-
+#### +) 지도 api를 사용하여 http로 배포된 환경에서는 이용이 안됩니다. locallhost에서 확인해주시면 감사하겠습니다 : )
 ------------
 
 ## 4. 컴포넌트 소개
