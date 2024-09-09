@@ -31,10 +31,11 @@
 
 --------
 
+
 # 2. 소스 빌드
 
 ```
-npm install
+npm run build
 ```
 
 -------
