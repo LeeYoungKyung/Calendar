@@ -83,7 +83,7 @@ npm start
 
 <img width="80%" src="https://github.com/user-attachments/assets/a7648c5c-26cc-415a-90a6-eafb86c34eb2" alt="hospital">
 
-주변에 있는 약국과 병원을 검색없이 한번에 찾을 수 있어요!
+실시간 주변에 있는 약국과 병원을 검색없이 한번에 찾을 수 있어요!
 
 ### ✔️ Medicine
 
