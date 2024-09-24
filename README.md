@@ -94,6 +94,9 @@ npm start
 
 ----
 
+### figma
+https://www.figma.com/design/YJrm0CJPN1wesSBkDUkYBk/Untitled?node-id=0-1&t=9CIHr5riPCd49u6s-1
+
 ### 커밋 규칙
 
 기능추가 : [feat]
